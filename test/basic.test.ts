@@ -5,6 +5,8 @@ import * as path from 'path'
 import osenv = require('osenv')
 import writeFile from '../src'
 
+jest.resetModules()
+
 describe('basic', () => {
   it('write to file', (done) => {
     const file = path.join(osenv.tmpdir(), 'pull-write-file_test.' + Date.now())
